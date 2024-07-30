@@ -4,27 +4,20 @@
   <artifactId>treeni_application_script</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-   <dependencies>
+<repositories>
+    <repository>
+      <id>my-repo</id>
+      <url>http://my-repo-url/repository/maven-releases/</url>
+    </repository>
+  </repositories>
+  
+  <dependencies>
     <!-- Selenium WebDriver -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.12.1</version>
-      
     </dependency>
-    <dependency>
-  <groupId>SeleniumProjects</groupId>
-  <artifactId>SeleniumProjects</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-</dependency>
-
-    <repositories>
-  <repository>
-    <id>my-repo</id>
-    <url>https://github.com/Sandeep82-R/treeni-application-automation-scriptsRepo/</url>
-  </repository>
-</repositories>
-
 
     <!-- TestNG -->
     <dependency>
@@ -35,10 +28,10 @@
     </dependency>
     
     <dependency>
-    	<groupId>SeleniumProjects</groupId>
-    	<artifactId>SeleniumProjects</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
+      <groupId>SeleniumProjects</groupId>
+      <artifactId>SeleniumProjects</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
     </dependency>
-   </dependencies>
+  </dependencies>
 
 </project>
