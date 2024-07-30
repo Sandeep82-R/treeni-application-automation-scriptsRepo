@@ -82,7 +82,6 @@ public void new_data_entry() throws InterruptedException, AWTException {
       driver.findElement(By.xpath("//*[@id=\"root\"]/nav/div/button[1]")).click();
       
      
-      
 }	    
 	    
 	    
