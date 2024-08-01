@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.junit.BeforeClass;
+//import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -24,12 +24,13 @@ public class Data_entry_test {
 		public WebDriver driver;
 		  public String originalWindowHandle;
 
-	    @BeforeClass
+	   
 	    public void setUp() {
 	        System.setProperty("webdriver.edge.driver", "D:/seleniumwork/Drives/edgedriver_win64.exe");
 	        driver = new EdgeDriver();
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	        driver.manage().window().maximize();
+	       
 	        driver.quit();
 	    }
 		
@@ -39,7 +40,7 @@ public class Data_entry_test {
 	    	WebDriver driver = new EdgeDriver();
 	    	 originalWindowHandle = driver.getWindowHandle();
 	    	 
-	    	 DataEntry();
+	    	 new_data_entry();
 	  	   
 	 		
 	    }

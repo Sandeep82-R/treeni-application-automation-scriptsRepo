@@ -1,16 +1,35 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
-  <groupId>treeni_application_script</groupId>
-  <artifactId>treeni_application_script</artifactId>
+  <groupId>SeleniumProjects</groupId>
+  <artifactId>SeleniumProjects</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <name>SeleniumProjects</name>
   
-<repositories>
-    <repository>
-      <id>my-repo</id>
-      <url>http://my-repo-url/repository/maven-releases/</url>
-    </repository>
-  </repositories>
+  <properties>
+    <suiteXmlFile>testng.xml</suiteXmlFile>
+  </properties>
   
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+        <configuration>
+          <includes>
+            <include>**/*Test.java</include>
+          </includes>
+          <suiteXmlFiles>
+            <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <!-- Selenium WebDriver -->
     <dependency>
@@ -24,13 +43,14 @@
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.8.0</version>
-      <scope>test</scope>
     </dependency>
-    
+
+    <!-- JUnit -->
     <dependency>
-      <groupId>SeleniumProjects</groupId>
-      <artifactId>SeleniumProjects</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
