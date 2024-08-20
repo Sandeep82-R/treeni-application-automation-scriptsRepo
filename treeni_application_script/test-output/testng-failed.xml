@@ -5,9 +5,7 @@
     <classes>
       <class name="main.Data_entry_test">
         <methods>
-          <include name="new_data_entry"/>
           <include name="login"/>
-          <include name="setUp"/>
         </methods>
       </class> <!-- main.Data_entry_test -->
     </classes>
